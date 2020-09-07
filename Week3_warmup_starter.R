@@ -21,6 +21,8 @@ options(stringsAsFactors=FALSE)
 
 
 #### 2. Load your data ####
+# Data adapted from Allison Horst and her Palmer Penguins
+# https://github.com/allisonhorst/palmerpenguins
 # Load in penguin.csv
 
 

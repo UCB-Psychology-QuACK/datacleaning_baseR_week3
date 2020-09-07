@@ -46,15 +46,36 @@ p38_weight<-penguins$body_mass_g[penguins$penguin=='p38']
 
 # P18
 
-#### 5. What islands has the most Adelie species ####
-table(penguins$species, penguins$island)
-
-#### 6. On average, do Adelie or Gentoo penguins have longer bill length? ####
+#### 5. On average, do Adelie or Gentoo penguins have longer bill length? ####
 
 mean(penguins$bill_length_mm[penguins$species == "Adelie"])
 mean(penguins$bill_length_mm[penguins$species == "Gentoo"])
 
 #Gentoo
 
-#### 7. Select all the penguins that weigh more than p18 ####
-penguins[penguins$weight > p18_weight,]
+
+#### 6. Subsetting data ####
+# In the following exerices, subset penguins using both bracket notation and the subset function
+# i. Make a data frame of all the penguins that weigh more than p18
+penguins_heavy <- penguins[penguins$weight > p18_weight,]
+penguins_heavy2 <- subset(penguins, weight > p18_weight)
+
+# ii. Make new data frames, one for each island. 
+
+# Example for one island
+penguins_Biscoe <- penguins[penguins$island == "Biscoe",]
+penguins_Biscoe2 <- subset(penguins, island == "Biscoe")
+
+
+# iii. Make a new data frame of all the Adelie penguins on Dream island.
+penguins_AdelieBiscoe <- penguins[penguins$species == "Adelie" & penguins$island == "Dream", ]
+penguins_AdelieBiscoe2 <- subset(penguins, species == "Adelie" & island == "Dream")
+
+# iv. Do the same as in iii, but now only select the species, island, bill_length_mm, and sex columns for your new data frame
+penguins_AdelieBiscoe3 <- penguins[penguins$species == "Adelie" & penguins$island == "Dream", c(1:3, 7)]
+penguins_AdelieBiscoe4 <- penguins[penguins$species == "Adelie" & penguins$island == "Dream", c("species", "island", "bill_length_mm", "sex")]
+penguins_AdelieBiscoe5 <- subset(penguins, species == "Adelie" & island == "Dream", select = c("species", "island", "bill_length_mm", "sex"))
+
+#### 7. Challenge: What island has the most Adelie species ####
+# Hint: Use table() function
+table(penguins$species, penguins$island)

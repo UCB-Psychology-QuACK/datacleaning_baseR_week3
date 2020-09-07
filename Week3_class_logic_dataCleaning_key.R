@@ -205,13 +205,26 @@ summary(df)
 
 
 #### Now, let's learn more about our data ####
+
+# Let's look at all the data for subject 4
+df.clean[4,] #... doesn't work anymore! Got data for subject 5!
+df.clean[3,] # ok, but not the best, better yet, select when subjid == 4
+df.clean[df.clean$subjid == 4,]
+
+# How old is subject 5?
+df.clean$age[df.clean$subjid == 5]
+
 # Get only participants who are older than 6
 df.clean[df.clean$age > 6,]
+# This is the subset of the data with participants older than 6
 
 
-# Select only the subjects that are bilingual
+# Subset only the subjects that are bilingual
 df.clean[df.clean$bilingual == 1,]
 
+# Subset only the subjects who are older than 6 AND bilingual
+df.clean[df.clean$age > 6 & df.clean$bilingual == 1,]
+# Only gives us one person!
 
 #### Subset function ####
 # We can also use the subset function to do this same thing.

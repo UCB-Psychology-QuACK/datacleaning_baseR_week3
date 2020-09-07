@@ -1,4 +1,4 @@
-# Data cleaning (Base R) - Week 3
+# Logic, subsetting, and data cleaning (Base R) - Week 3
 This repo contains starter code and any associated data for week 3. NOTE: "starter"  indicates the starter code that you should try to complete as we go through the lesson. "Key" is a completed version of the code based on what we did in class. 
 
 * Week3_warmup - warmup exercises (starter) and example answers (key)

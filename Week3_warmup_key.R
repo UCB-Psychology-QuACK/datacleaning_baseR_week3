@@ -23,6 +23,8 @@ setwd('~/Desktop/') # Or wherever you have it!
 
 #### 2. Load your data ####
 # Load in penguin.csv
+# Data adapted from Allison Horst and her Palmer Penguins
+# https://github.com/allisonhorst/palmerpenguins
 penguins <- read.csv('penguin.csv')
 
 #### 3. Get some general info about the dataframe ####

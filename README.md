@@ -3,7 +3,6 @@ This repo contains starter code and any associated data for week 3. NOTE: "start
 
 * Week3_warmup - warmup exercises (starter) and example answers (key)
 * Week3_class_logic_dataCleaning - in class exercises (starter) and completed code (key) from class demo
-* Week3_practice - practice exercises (starter) and example answers (key)
 * penguins.csv - data for warmup and practice
 
 Note: Data have been adapted by Willa from Allison Horst and her Palmer Penguins: https://github.com/allisonhorst/palmerpenguins.
